@@ -12,3 +12,13 @@ for( i = 1; i <= 10; i++){
         console.log(i)
     }
  }
+
+ // 2 EX
+
+let number = 0
+
+for( let i = number-1; i >= 1; i--){
+   number*=i
+    }
+
+console.log(number)
