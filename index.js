@@ -38,3 +38,28 @@ finalResult = (result - result%sheetsInReamPaper)/sheetsInReamPaper + 1
     finalResult = result/sheetsInReamPaper
 }
 console.log(finalResult)
+
+// hw1-4
+
+function multiply(roomsOnFloor, floors, roomNumber){
+    
+roomsInPorch = floors*roomsOnFloor
+
+if(roomNumber%roomsInPorch == 0){
+    porch = roomNumber/roomsInPorch
+}else{
+    porch = roomNumber/roomsInPorch - roomNumber%roomsInPorch/roomsInPorch + 1
+}
+
+console.log('porch: ', porch)
+
+
+if(roomNumber%roomsInPorch%roomsOnFloor == 0){
+floor = roomNumber%roomsInPorch/roomsOnFloor
+}else{
+    floor = roomNumber%roomsInPorch/roomsOnFloor - roomNumber%roomsInPorch%roomsOnFloor/roomsOnFloor + 1
+}
+console.log('floor: ', floor)
+  }
+
+  multiply(3, 9, 456)
