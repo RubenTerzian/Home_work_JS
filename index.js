@@ -1,4 +1,4 @@
-//  1 EX
+//  hw1-1
 
 for( i = 1; i <= 10; i++){
     if (i%3 == 0){
@@ -13,7 +13,7 @@ for( i = 1; i <= 10; i++){
     }
  }
 
- // 2 EX
+ // hw1-2
 
 let number = 10
 
@@ -23,17 +23,17 @@ for( let i = number-1; i >= 1; i--){
 
 console.log(number)
 
-// 3 EX
+// hw1-3
 
 const sheetsInReamPaper = 500;
 const consumptionPerWeek = 1200;
-const weeksAmount = 10;
+const weeksAmount = 8;
 
 let result = consumptionPerWeek*weeksAmount;
 let finalResult;
 
 if(result%sheetsInReamPaper > 0){
-finalResult = Math.ceil(result/sheetsInReamPaper)
+finalResult = (result - result%sheetsInReamPaper)/sheetsInReamPaper + 1
 }else{
     finalResult = result/sheetsInReamPaper
 }
