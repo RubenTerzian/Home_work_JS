@@ -90,3 +90,17 @@ function SummOfMinNumber(){
 
 SummOfMinNumber ()
 
+// hw2-5
+
+const arrNumber = [1, 1, 1, 0, 1];
+let j = arrNumber.length - 1;
+let result = 0;
+const arrResult = [];
+console.log('Двоичное представление числа: ', arrNumber)
+
+for (i=j, k=1, u=0; i>=0, k<j*3, u<=j; i--, k=k*2, u++){
+   arrResult[u] = arrNumber[i]*k; 
+    result+=arrResult[u]
+
+}
+console.log('Число в десятичном виде: ', result)
