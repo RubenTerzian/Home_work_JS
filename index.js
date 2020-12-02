@@ -40,3 +40,25 @@ function getArray(){
 }
 
 getArray ()
+
+// hw2-3
+
+const namesOfDays = {
+    ru: ['Понедельник', 'Вторник', 'Среда','Четверг', 'Пятница', 'Суббота', 'Воскресенье', 'Воскресенье'],
+    en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+}
+
+
+
+function getNameOfDay(){
+    const lang = 'en';
+    const day = 7;
+    if(lang == 'en'){
+        console.log('Today is '+namesOfDays.en[(day-1)])
+    }
+    if(lang == 'ru'){
+        console.log('Сегодня: '+namesOfDays.ru[day-1])
+    }
+}
+
+getNameOfDay() 
