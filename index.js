@@ -19,27 +19,26 @@ console.log(arr)
 
 // hw2-2
 
-function getArray(){
-    const amount = 15
-    const arr =[]
-    const arrInside = [1, 2, 3]
-    if(amount%3==0){
-        for(i=0;  i<=(amount/3-1); i++){
-                if(i>0){
-                    for(j=0;  j<=2; j++){
-                        arrInside[j] +=3 
-                    }
-                }
-            arr[i] = arrInside+''
+function getArray(number) {
+    const amount = number;
+    const l = 3;
+    if (amount % l == 0) {
+      const h = amount / l;
+      let arr = [];
+      let arrInside = [1, 2, 3];
+      arr.push(arrInside);
+      for (let i=1; i<h; i++) {
+        arr.push([])
+        for (let j=0; j<l; j++) {        
+          arr[i].push(arrInside[j]+i*3);
         }
-        console.log(arr)
-        
-    }else{
-        console.log('amount должно быть кратно 3')
+      }
+      console.log(arr);
+    } else {
+      console.log('number должен быть кратным 3')
     }
-}
-
-getArray ()
+  }
+  getArray(18)
 
 // hw2-3
 
