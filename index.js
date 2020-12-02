@@ -61,4 +61,33 @@ function getNameOfDay(){
     }
 }
 
-getNameOfDay() 
+getNameOfDay()
+
+// hw2-4
+
+
+
+function SummOfMinNumber(){
+    const ArrOfNumber = [564,  1245, 234, 999, 2332,432, 1.2, -4]
+    const FirstTwoMin = [ArrOfNumber[0], ArrOfNumber[0]]
+    for(i=0; i<ArrOfNumber.length; i++){
+    if(ArrOfNumber[i]>=0 && ArrOfNumber[i]%1==0){
+            if(ArrOfNumber[i]<FirstTwoMin[0]){
+                
+                FirstTwoMin[0]=ArrOfNumber[i]
+            }
+        }
+    }
+    for(i=0; i<ArrOfNumber.length; i++){
+        if(ArrOfNumber[i]>=0 && ArrOfNumber[i]%1==0){
+            if(ArrOfNumber[i]<FirstTwoMin[1] && ArrOfNumber[i]>FirstTwoMin[0]){
+                FirstTwoMin[1]=ArrOfNumber[i]
+            
+            }
+        }
+    }
+    console.log('Наименьшими числами масива являются ', FirstTwoMin[0], 'и', FirstTwoMin[1],'. Их сумма равна',FirstTwoMin[0] + FirstTwoMin[1])
+}
+
+SummOfMinNumber ()
+
