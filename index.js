@@ -10,8 +10,9 @@ const citiesAndCountries = {
 	'Вена': 'Австрия',
 };
 
-  
-  for(let result in citiesAndCountries)
-    console.log(result, '- это', citiesAndCountries[result]);
-    
-  
+const arr =[];
+
+    for(let result in citiesAndCountries)
+    arr.push(result+' - это '+citiesAndCountries[result]);
+
+console.log(arr)
