@@ -64,3 +64,23 @@ console.log('floor: ', floor)
   }
 
   multiply(3, 9, 456)
+
+//   hw1-5
+
+const medianNumber = 13
+const widthLine=medianNumber*2-1
+
+for(i=1; i<=medianNumber; i++){
+    let str = ''
+    for(j=1; j<=widthLine; j++){
+       if(j>medianNumber-i && j<medianNumber+i){
+           str+='#'
+           
+        }else{
+            str+='-'
+        }
+        
+    }
+    console.log(str)
+    
+}
