@@ -15,13 +15,14 @@ for( i = 1; i <= 10; i++){
 
  // hw1-2
 
-let number = 10
+let number = 8
+let factorial = number
 
-for( let i = number-1; i >= 1; i--){
-   number*=i
+for( let i = factorial-1; i >= 1; i--){
+    factorial*=i
     }
 
-console.log(number)
+console.log('Факториал числа',number, '=',factorial)
 
 // hw1-3
 
@@ -37,13 +38,13 @@ finalResult = (result - result%sheetsInReamPaper)/sheetsInReamPaper + 1
 }else{
     finalResult = result/sheetsInReamPaper
 }
-console.log(finalResult)
+console.log('Нужно', finalResult, 'пачек бумаги')
 
 // hw1-4
 
 function multiply(roomsOnFloor, floors, roomNumber){
     
-roomsInPorch = floors*roomsOnFloor
+let roomsInPorch = floors*roomsOnFloor
 
 if(roomNumber%roomsInPorch == 0){
     porch = roomNumber/roomsInPorch
