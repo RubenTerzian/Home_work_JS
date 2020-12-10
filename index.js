@@ -8,8 +8,18 @@ const Emploee = function(id, name, surname, salary, workExperience, isPrivileges
     this.workExperience = workExperience;
     this.isPrivileges = isPrivileges;
     this.gender = gender;
-}
-   
 
-const employeeObj = new Emploee(1, 'Сергей', 'Войлов', 1200, 12, false, 'male')
-console.log(employeeObj)
+    // hw3-2
+
+    Emploee.prototype.getFullName = function () {
+        return this.name + ' ' + this.surname;
+    }
+ }
+
+const employeeObj = new Emploee(1, 'Сергей', 'Войлов', 1200, 12, false, 'male');
+console.log(employeeObj);
+
+console.log(employeeObj.getFullName())
+
+
+
