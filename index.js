@@ -1,13 +1,10 @@
 // hw3-1
 
-const Emploee = function(id, name, surname, salary, workExperience, isPrivileges, gender){
-    this.id = id;
-    this.name = name;
-    this.surname = surname;
-    this.salary = salary;
-    this.workExperience = workExperience;
-    this.isPrivileges = isPrivileges;
-    this.gender = gender;
+class Emploee {
+    constructor (obj){
+        for (let key in obj){
+            this[key]=obj[key]
+        }
 
     // hw3-2
 
@@ -15,8 +12,9 @@ const Emploee = function(id, name, surname, salary, workExperience, isPrivileges
         return this.name + ' ' + this.surname;
     }
  }
+}
 
-const employeeObj = new Emploee(1, 'Сергей', 'Войлов', 1200, 12, false, 'male');
+const employeeObj = new Emploee(emplyeeArr[0]);
 console.log(employeeObj);
 
 console.log(employeeObj.getFullName())
@@ -25,8 +23,8 @@ console.log(employeeObj.getFullName())
 
 let createEmployesFromArr = (arr) => {
     const arrTest =[]
-    for (let key of arr){
-       arrTest.push(new Emploee(key.id, key.name, key.surname, key.salary, key.workExperience, key.isPrivileges, key.gender))
+    for (let key in arr){
+       arrTest.push(new Emploee(emplyeeArr[key]))
     }
     return arrTest
 };
