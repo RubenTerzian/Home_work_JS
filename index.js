@@ -21,5 +21,17 @@ console.log(employeeObj);
 
 console.log(employeeObj.getFullName())
 
+// hw3-3
+
+let createEmployesFromArr = (arr) => {
+    const arrTest =[]
+    for (let key of arr){
+       arrTest.push(new Emploee(key.id, key.name, key.surname, key.salary, key.workExperience, key.isPrivileges, key.gender))
+    }
+    return arrTest
+};
+const emplyeeConstructArr = createEmployesFromArr(emplyeeArr) 
+console.log(emplyeeConstructArr)
+
 
 
