@@ -45,3 +45,20 @@ const getFullNamesFromArr = (arr) => {
     
 console.log(getFullNamesFromArr(emplyeeConstructArr))
 
+// hw3-5
+
+const getMiddleSalary = (arr) => {
+    const arrLocal = [];
+    let summ = 0
+    for (let key of arr){
+        arrLocal.push(key.salary)
+    }
+    for (let i=0; i<arrLocal.length; i++){
+        summ += arrLocal[i]
+        
+    }
+    console.log('Все ЗП сотрудников: ', arrLocal)
+    return summ/(arrLocal.length)
+}
+
+console.log('Средняя ЗП среди сотрудников: ',getMiddleSalary(emplyeeConstructArr)) 
