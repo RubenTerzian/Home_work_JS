@@ -33,5 +33,15 @@ let createEmployesFromArr = (arr) => {
 const emplyeeConstructArr = createEmployesFromArr(emplyeeArr) 
 console.log(emplyeeConstructArr)
 
+// hw3-4
 
+const getFullNamesFromArr = (arr) => {
+    const arrLocal =[]
+    for (let key of arr){
+        arrLocal.push(key.name + ' ' + key.surname)
+    }
+    return arrLocal
+}
+    
+console.log(getFullNamesFromArr(emplyeeConstructArr))
 
