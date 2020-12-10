@@ -62,3 +62,14 @@ const getMiddleSalary = (arr) => {
 }
 
 console.log('Средняя ЗП среди сотрудников: ',getMiddleSalary(emplyeeConstructArr)) 
+
+// hw3-6
+
+const getRandomEmployee = (arr) => {
+   i=Math.floor(Math.random()*20)
+   if (i>arr.length){
+    i = Math.round(i/2)
+   }
+    return arr[i]
+}
+    console.log(getRandomEmployee(emplyeeConstructArr))
