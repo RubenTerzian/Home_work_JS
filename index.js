@@ -40,17 +40,17 @@ class Student{
         return allStudents;
     }
 }
-const enrollee1 = new Student(obj1);
-const enrollee2 = new Student(obj2);
-const enrollee3 = new Student(obj3);
-const enrollee4 = new Student(obj4);
-const enrollee5 = new Student(obj5);
-const enrollee6 = new Student(obj6);
-const enrollee7 = new Student(obj7);
-const enrollee8 = new Student(obj8);
-const enrollee9 = new Student(obj9);
-const enrollee10 = new Student(obj10);
-const enrollee11 = new Student(obj11);
+const enrollee1 = new Student(studentArr[0]);
+const enrollee2 = new Student(studentArr[1]);
+const enrollee3 = new Student(studentArr[2]);
+const enrollee4 = new Student(studentArr[3]);
+const enrollee5 = new Student(studentArr[4]);
+const enrollee6 = new Student(studentArr[5]);
+const enrollee7 = new Student(studentArr[6]);
+const enrollee8 = new Student(studentArr[7]);
+const enrollee9 = new Student(studentArr[8]);
+const enrollee10 = new Student(studentArr[9]);
+const enrollee11 = new Student(studentArr[10]);
 
 // result fot this task
 console.log(Student.listOfStudents());
