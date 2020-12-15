@@ -3,7 +3,6 @@
 let id = 1;
 const allStudents = [];
 const studentsOnBudget = [];
-let lastBetweenBudget = {};
 class Student{
     constructor(enrollee){
         this.id = id++; 
