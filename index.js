@@ -56,3 +56,25 @@ const enrollee11 = new Student(studentArr[10]);
 console.log(Student.listOfStudents());
 console.log(studentsOnBudget);
 
+// hw4-2
+
+class CustomString{
+    constructor(){}
+    static reverse (str){
+        return str.split("").reverse().join("");
+    }
+
+    static ucFirst (str){       
+        return  str[0].toUpperCase()+str.slice(1).toLowerCase();
+    }
+
+    static ucWords (str){
+        const splitArr = str.split(' ')
+        for(let i=0; i<splitArr.length; i++){
+            splitArr[i] = CustomString.ucFirst(splitArr[i])
+        }
+
+        return splitArr.join(" ");
+    }
+}
+
