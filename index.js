@@ -9,7 +9,7 @@ class Emploee {
     // hw3-2
 
     Emploee.prototype.getFullName = function () {
-        return this.name + ' ' + this.surname;
+        return this.surname + ' ' + this.name;
         };
     }
 
