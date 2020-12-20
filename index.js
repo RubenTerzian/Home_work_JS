@@ -86,11 +86,9 @@ console.log('Средняя ЗП среди сотрудников: ',getMiddleS
 // hw3-6
 
 const getRandomEmployee = (arr) => {
-   i=Math.floor(Math.random()*20)
-   if (i>arr.length){
-    i = Math.round(i/2)
-   }
-    return arr[i]
-}
-    console.log(getRandomEmployee(emplyeeConstructArr))
+    let i = Math.floor(Math.random() * (arr.length));
+    
+    return console.log(arr[i]);
+};
+
 
