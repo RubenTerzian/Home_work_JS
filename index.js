@@ -78,6 +78,7 @@ const timer = (time)=>{
         
     };
     const counter = setInterval(calculation, 1000);
+    return "Start";
     
 };
 
