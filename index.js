@@ -50,12 +50,15 @@ const namesOfDays = {
 function getNameOfDay(){
     const lang = 'en';
     const day = 7;
-    if(lang == 'en'){
-        console.log('Today is '+namesOfDays.en[(day-1)])
-    }
-    if(lang == 'ru'){
-        console.log('Сегодня: '+namesOfDays.ru[day-1])
-
+    if(lang !== 'en' && lang !=='ru'){
+        console.log('Choose correct language. It shoud be "ru" or "en".')
+    }else{
+        if(lang == 'en'){
+            console.log('Today is '+namesOfDays.en[(day-1)])
+        }
+        if(lang == 'ru'){
+            console.log('Сегодня: '+namesOfDays.ru[day-1])
+        }
     }
 }
 
