@@ -66,25 +66,16 @@ getNameOfDay()
 
 
 function SummOfMinNumber(){
-    const ArrOfNumber = [564,  1245, 234, 999, 2332,432, 1.2, -4]
-    const FirstTwoMin = [ArrOfNumber[0], ArrOfNumber[0]]
-    for(i=0; i<ArrOfNumber.length; i++){
-    if(ArrOfNumber[i]>=0 && ArrOfNumber[i]%1==0){
-            if(ArrOfNumber[i]<FirstTwoMin[0]){
-                
-                FirstTwoMin[0]=ArrOfNumber[i]
-            }
+    const arrOfNumber = [1,  -2, 234, 999, 2332,432, 1.2, -4]
+    const validArray =[];
+    arrOfNumber.sort( (a, b) => a - b );
+    for(i=0; i<arrOfNumber.length; i++){
+        if(arrOfNumber[i]>=0 && arrOfNumber[i]%1==0){
+            validArray.push(arrOfNumber[i])
         }
     }
-    for(i=0; i<ArrOfNumber.length; i++){
-        if(ArrOfNumber[i]>=0 && ArrOfNumber[i]%1==0){
-            if(ArrOfNumber[i]<FirstTwoMin[1] && ArrOfNumber[i]>FirstTwoMin[0]){
-                FirstTwoMin[1]=ArrOfNumber[i]
-            
-            }
-        }
-    }
-    console.log('Наименьшими числами масива являются ', FirstTwoMin[0], 'и', FirstTwoMin[1],'. Их сумма равна',FirstTwoMin[0] + FirstTwoMin[1])
+    let summOfFirstTwoMin = validArray[0] + validArray[1];
+    return console.log('Наименьшими числами масива являются ', validArray[0], 'и', validArray[1],'. Их сумма равна', summOfFirstTwoMin )
 }
 
 SummOfMinNumber ()
