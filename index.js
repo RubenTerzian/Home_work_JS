@@ -1,6 +1,6 @@
 // hw5-1
 
-const counterFoo = () =>{
+const counterClosure = () =>{
     let localAmount = 0;
 
     return (amount)=>{
@@ -9,11 +9,11 @@ const counterFoo = () =>{
     };
 };
 
-const counter = counterFoo();
+const counter = counterClosure();
 
 // hw5-2
 
-const foo = () =>{
+const getUpdateArrClosure = () =>{
     let localArr = [];
     return (element) =>{
         if(element == undefined){
@@ -25,8 +25,27 @@ const foo = () =>{
     }
 }
 
-const getUpdateArr = foo();
+const getUpdateArr = getUpdateArrClosure();
 
+// hw5-3
 
+const getTimeClosure = () =>{
+    let localArr = [];
+    return () =>{
+        if(localArr.length == 0){
+            localArr.push(new Date().getTime());
+            return "Enabled";
+        }
+        localArr.push(new Date().getTime());
+        let result = localArr[1] - localArr[0];
+        if(localArr.length>1){
+            localArr.splice(0,1);
+        }   
+        let finalResult = Math.floor(result/1000)
+        return "С последнего вызова функции прошло секунд - " + finalResult;
+    } 
+}
+
+const getTime = getTimeClosure();
 
 
