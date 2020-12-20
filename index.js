@@ -10,8 +10,30 @@ class Emploee {
 
     Emploee.prototype.getFullName = function () {
         return this.name + ' ' + this.surname;
+        };
     }
- }
+
+    // hw3-7
+
+    get fullInfo (){
+        const localArr = [];
+        Object.assign(localArr, this);
+        let str = "";
+        for (let key in localArr){
+            this[key]=localArr[key];
+            str += key + ' - ' + localArr[key]+', ';
+        }
+        return str;
+    }
+
+    set fullInfo (obj){
+        for(let key in obj){
+            if(this[key] !== undefined){
+                this[key] = obj[key];
+            }
+            
+        }
+    }
 }
 
 const employeeObj = new Emploee(emplyeeArr[0]);
