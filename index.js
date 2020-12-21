@@ -7,3 +7,12 @@ const arr = ['Vasya', 'Petya', 'Alexey']
 }
 removeUser(arr, 1)
 console.log(arr) 
+
+// hw6-2
+console.log("--------------------- TASK 6-2 -----------------------")
+
+const obj = { name: 'Vasya', age: 1}
+getAllKeys = (a) =>{
+    return console.log(Object.keys(a));
+}
+getAllKeys(obj)
