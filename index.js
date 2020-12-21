@@ -16,3 +16,13 @@ getAllKeys = (a) =>{
     return console.log(Object.keys(a));
 }
 getAllKeys(obj)
+
+
+// hw6-3
+console.log("--------------------- TASK 6-3 -----------------------")
+
+getAllValues = (a) =>{
+    return console.log(Object.values(a));
+}
+
+getAllValues(obj)
