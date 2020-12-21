@@ -57,19 +57,13 @@ const timer = (time)=>{
         let result = time - foo();
         let minutes = Math.floor(result/60);
         let seconds = result%60;
-        let correctView = minutes + ":" + seconds;
-         if(seconds < 10){
-                correctView = minutes + ":" + "0" + seconds;
-            }
-        if(minutes <10){
-            correctView = "0" + minutes + ":" + seconds;
-            if(seconds < 10){
-                correctView = "0" + minutes + ":" + "0" + seconds;
-            }
-
-        }
+        let minutesView;
+        let secondsView
+        minutes <10? minutesView = "0" + minutes :  minutesView = minutes;
+        seconds <10? secondsView = "0" + seconds :  secondsView = seconds;
+       
         if(result > 0){
-            console.log(correctView);
+            console.log(minutesView + ":" + secondsView);
         }
         if(result === 0){
             console.log('Time end')
