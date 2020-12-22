@@ -26,3 +26,18 @@ getAllValues = (a) =>{
 }
 
 getAllValues(obj)
+
+// hw6-4
+console.log("--------------------- TASK 6-4 -----------------------")
+
+insertIntoarr =(obj, id)=>{
+    for(let key of condidateArr){
+        if(key._id == id){
+            let index = condidateArr.indexOf(key)
+            condidateArr.splice(index, 0, obj);
+            return console.log(condidateArr)
+        }
+    }
+}
+
+insertIntoarr({new: "object"}, "5e216bc9e9c1eb0c1f46b97e");
