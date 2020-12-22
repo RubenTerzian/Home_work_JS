@@ -41,3 +41,21 @@ insertIntoarr =(obj, id)=>{
 }
 
 insertIntoarr({new: "object"}, "5e216bc9e9c1eb0c1f46b97e");
+
+// hw6-5
+console.log("--------------------- TASK 6-5 -----------------------")
+
+class Condidate{
+    constructor(obj){
+        Object.assign(this, obj)
+    }
+
+    get state (){
+       const arr = this.address.split(",");
+       return arr[2];
+    }
+}
+
+const condidate = new Condidate(condidateArr[2]);
+console.log(condidate.state)
+
