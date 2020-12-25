@@ -75,5 +75,12 @@ const getCompanyNames = ()=>{
 console.log(getCompanyNames());
 
 
+// hw6-7
+console.log("--------------------- TASK 6-7 -----------------------");
 
+const getUsersByYear = (year)=>{
+    return condidateArr.filter(condidateArr=> year == condidateArr.registered.substr(0,4)).map(el=>el._id);
+    
+};
 
+console.log(getUsersByYear(2017));
