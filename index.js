@@ -103,3 +103,24 @@ const getCondidatesByGender = (gender)=>{
 console.log(getCondidatesByGender('male'));
 console.log('Для удобства выведем массив со значениями свойства  "gender" из полученного массива');
 console.log(getCondidatesByGender('male').map(el=>el.gender));
+
+// hw6-10
+console.log("--------------------- TASK 6-10 -----------------------");
+
+const customJoin = function(separ){
+    let str = '';
+    const separator = separ === undefined ? ',': separ;
+    for (let index in this){
+        if(this[index] === undefined || this[index] === null ){
+            index<this.length-1 ? str+= '' + separator: str+= '';
+            continue;
+        }
+        index<this.length-1 ? str+= this[index] + separator: str+= this[index];
+    }
+    return str;
+};
+
+Object.defineProperty(Array.prototype, 'customJoin', {
+    value: customJoin,
+    enumerable: false,
+});
