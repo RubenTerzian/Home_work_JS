@@ -84,3 +84,11 @@ const getUsersByYear = (year)=>{
 };
 
 console.log(getUsersByYear(2017));
+
+// hw6-8
+console.log("--------------------- TASK 6-8 -----------------------");
+const getCondidatesByUnreadMsg = (num)=>{
+    return condidateArr.filter(el=>num == el.greeting.split(' ')[5]);
+};
+
+console.log(getCondidatesByUnreadMsg(8))
