@@ -92,3 +92,14 @@ const getCondidatesByUnreadMsg = (num)=>{
 };
 
 console.log(getCondidatesByUnreadMsg(8))
+
+// hw6-9
+console.log("--------------------- TASK 6-9 -----------------------");
+
+const getCondidatesByGender = (gender)=>{
+    return condidateArr.filter(el=> gender == el.gender);
+};
+
+console.log(getCondidatesByGender('male'));
+console.log('Для удобства выведем массив со значениями свойства  "gender" из полученного массива');
+console.log(getCondidatesByGender('male').map(el=>el.gender));
