@@ -11,3 +11,21 @@ const getCandidateById = id => {
         }
     })
 }
+
+// hw7-3
+
+const sortCandidatesArr = sortBy => {
+    if(sortBy == 'asc'){
+        condidateArr.sort(function(a, b) {
+            return a.balance.slice(1).replace(',', '') - b.balance.slice(1).replace(',', '');
+          })
+          return condidateArr;
+    }
+    if(sortBy == 'desc'){
+        condidateArr.sort(function(a, b) {
+            return b.balance.slice(1).replace(',', '') - a.balance.slice(1).replace(',', '');
+          })
+          return condidateArr;
+    }
+     return condidateArr;
+}
