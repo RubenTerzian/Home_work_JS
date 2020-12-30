@@ -44,3 +44,18 @@ const sortCandidatesArr = sortBy => {
     }
      return condidateArr;
 }
+
+// hw7-4
+
+const getEyeColorMap = () => {
+ const obj ={};
+  condidateArr.forEach(el=>{
+      let color = el.eyeColor
+      obj[color] = []
+  })
+  for (let key in obj){
+      obj[key] = condidateArr.filter(el=>el.eyeColor == key)
+  }
+  
+  return obj;
+}
