@@ -29,15 +29,16 @@ const getCandidateById = id => {
 // hw7-3
 
 const sortCandidatesArr = sortBy => {
+    const validateBalance = (el) => el.balance.slice(1).replace(',', '');
     if(sortBy == 'asc'){
         condidateArr.sort(function(a, b) {
-            return a.balance.slice(1).replace(',', '') - b.balance.slice(1).replace(',', '');
+            return validateBalance(a) - validateBalance(b);
           })
           return condidateArr;
     }
     if(sortBy == 'desc'){
         condidateArr.sort(function(a, b) {
-            return b.balance.slice(1).replace(',', '') - a.balance.slice(1).replace(',', '');
+            return validateBalance(b) - validateBalance(a);
           })
           return condidateArr;
     }

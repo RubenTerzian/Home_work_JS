@@ -30,16 +30,20 @@ var getCandidateById = function getCandidateById(id) {
 
 
 var sortCandidatesArr = function sortCandidatesArr(sortBy) {
+  var validateBalance = function validateBalance(el) {
+    return el.balance.slice(1).replace(',', '');
+  };
+
   if (sortBy == 'asc') {
     condidateArr.sort(function (a, b) {
-      return a.balance.slice(1).replace(',', '') - b.balance.slice(1).replace(',', '');
+      return validateBalance(a) - validateBalance(b);
     });
     return condidateArr;
   }
 
   if (sortBy == 'desc') {
     condidateArr.sort(function (a, b) {
-      return b.balance.slice(1).replace(',', '') - a.balance.slice(1).replace(',', '');
+      return validateBalance(b) - validateBalance(a);
     });
     return condidateArr;
   }
