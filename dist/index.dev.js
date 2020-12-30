@@ -1,6 +1,22 @@
 "use strict";
 
-// hw7-2
+// hw7-1
+var searchCandidatesByPhoneNumber = function searchCandidatesByPhoneNumber(phone) {
+  var resultArr = [];
+
+  var validateNamber = function validateNamber(str) {
+    return str.match(/\d/g).join('');
+  };
+
+  condidateArr.forEach(function (el) {
+    if (validateNamber(el.phone).includes(validateNamber(phone))) {
+      resultArr.push(el);
+    }
+  });
+  return resultArr;
+}; // hw7-2
+
+
 var getCandidateById = function getCandidateById(id) {
   condidateArr.forEach(function (el) {
     if (el._id == id) {

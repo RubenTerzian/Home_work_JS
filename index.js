@@ -1,3 +1,17 @@
+// hw7-1
+
+const searchCandidatesByPhoneNumber = phone => {
+    const resultArr =[];
+    const validateNamber = (str)=>{
+        return str.match(/\d/g).join('');
+    }
+    condidateArr.forEach((el)=>{
+        if(validateNamber(el.phone).includes(validateNamber(phone))){
+            resultArr.push(el)
+        }
+    });
+    return resultArr;
+}
 
 // hw7-2
 
