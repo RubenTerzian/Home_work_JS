@@ -78,3 +78,31 @@ class CustomString{
     }
 }
 
+//hw4-3
+
+class Validator{
+    checkIsEmail (email){
+        let firstArr = email.split('@');
+        return firstArr[1] == 'gmail.com'?true:false;
+    }
+
+    checkIsDomain (damain){
+        let firstArr = damain.split('.');
+        let dom = firstArr[firstArr.length-1]
+        return dom == 'com' || dom == 'ua' || dom == ru ?true:false;
+    }
+
+    checkIsDate (date){
+        let dateArr = date.split('.');
+        if(dateArr.length != 3){
+            return false;
+        }else{
+            let dayArr = dateArr[0].split('');
+            let monthArr = dateArr[1].split('');
+            let yearArr = dateArr[2].split('');
+            return dayArr.length == 2  && monthArr.length == 2  && yearArr.length == 4?true:false;
+        }
+    }
+
+}
+const validator = new Validator();
